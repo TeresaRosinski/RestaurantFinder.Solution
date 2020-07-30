@@ -1,0 +1,13 @@
+@{
+  Layout = "_Layout";
+}
+
+@model FoodFinder.Models.Cuisine
+
+<legend>Delete a cuisine</legend>
+
+@Html.DisplayNameFor(model => model.Type): @Html.DisplayFor(model => model.Type)
+@using(Html.BeginForm())
+{
+  <input type="submit" value="delete" />
+}

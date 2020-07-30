@@ -24,9 +24,9 @@ namespace FoodFinder
     {
       services.AddMvc();
 
-      //services.AddEntityFrameworkMySql()
-      //.AddDbContext<ToDoListContext>(options => options
-      //.UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
+      services.AddEntityFrameworkMySql()
+      .AddDbContext<FoodFinderContext>(options => options
+      .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
     }
 
     public void Configure(IApplicationBuilder app)

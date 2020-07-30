@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+
+@model FoodFinder.Models.Cuisine
+
+<legend>Add a Cuisine</legend>
+
+@using(Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Type)
+  @Html.TextBoxFor(model => model.Type)
+  <input type="submit" value="Add a new Cuisine" />
+}
